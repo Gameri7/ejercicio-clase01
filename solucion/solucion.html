@@ -7,21 +7,45 @@
 
         
 
-        <h5>Ejemplo 02</h5>
+        <h5>Ejemplo 02 Solución Galo_Medina  INGENIERIA DE SOFTWARE</h5>
         <div class="mermaid">
           classDiagram
-    class BankAccount
-    BankAccount : +String id
-    BankAccount : +Bigdecimal balance
-    BankAccount : +deposit(amount)
-    BankAccount : +withdrawal(amount)
+          direction LR
 
-    class Personaa
-    Personaa : +tring name
-    Personaa : +int edad
+
+    class Equipo
+    Equipo : +nombre
+    Equipo : +Tipo_deporte
+    Equipo : +siglas
     
-    Person "1" --> "*" BankAccount
+
+    class tipo_deporte{
+        << enumeration >>
+            FUTBOL
+            TENIS
+            BALONCESTO
+    }
+    
+ class Jugador
+    Jugador : +nombre
+    Jugador : +apellido
+   
+    class Sancion
+    Sancion : +obserbacion
+    Sancion : +multa
+
+    
+    
+    Equipo "1" <-- "*" Jugador
+    Jugador "1" --> "*" Sancion
+    tipo_deporte .. Equipo
+
+    class Referencia
+    link Referencia "https://drive.google.com/file/d/1KRkP8tlAAx7Qm7SI-HZr7M2oQ81k5j15/view""documento de Bibliografia"
+
 
         </div>
+        <hr>
+                        <strong>- El estilo  "cssClass" no se puede agregar usando al mismo tiempo que una declaración de relación </strong>
     </body>
 </html>
